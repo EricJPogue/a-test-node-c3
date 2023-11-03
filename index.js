@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
+const cors = require("cors")
 
 app.use(express.static(__dirname + '/client'))
+app.use(cors({ origin: '*' }))
 
 const port = process.env.PORT || 3000
 app.get('/test', function(request, response) {
