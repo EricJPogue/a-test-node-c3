@@ -5,5 +5,19 @@
 </head>
 <body>
 	<h1>a-test-node-c3</h1>
+
+
+	<script>
+		alert( 'Fetching' );
+		getFavoritePlaces()
+	
+		async function getFavoritePlaces() {
+			  const response = await fetch("/api/favorite-places");
+			  
+			  const places = await response.json();
+			  console.log(places);
+		}
+	</script>
+
 </body>
 </html>
